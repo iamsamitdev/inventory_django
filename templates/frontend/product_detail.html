@@ -1,0 +1,20 @@
+{% extends 'frontend/layout.html' %}
+
+{% block title %} {{ product.product_name }} {% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ product.product_image }}" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h1>{{ product.product_name }}</h1>
+                <h3>{{ product.product_price }} THB</h3>
+                <p>Barcode: {{ product.product_barcode }}</p>
+                <p>Qty: {{ product.product_qty }}</p>
+                <p>{{ product.product_detail }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
